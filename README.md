@@ -21,6 +21,11 @@ cd federation-flow
 composer update
 ./flow server:run
 
+# Set up avatar image endpoint
+cd federation-user
+npm i
+npm run start
+
 # finaly start the apollo gateway
 cd apollo-gateway
 npm i
