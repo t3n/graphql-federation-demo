@@ -1,0 +1,15 @@
+
+
+type News @key(fields: "identifier") {
+    identifier: ID!
+    title: String!
+    author: User
+}
+
+type User @key(fields: "identifier") @extends {
+    identifier: ID! @external
+}
+
+type Query {
+    allNews: [News]
+}

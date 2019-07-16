@@ -1,0 +1,9 @@
+
+type User @key(fields: "identifier") {
+    identifier: ID!
+    name: String!
+}
+
+type Query {
+    users: [User]
+}

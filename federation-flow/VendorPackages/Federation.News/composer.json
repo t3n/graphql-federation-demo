@@ -1,0 +1,19 @@
+{
+  "description": "t3n contentapi grapqhl package",
+  "type": "neos-package",
+  "name": "federation/news",
+  "require": {
+    "t3n/graphql": "*",
+    "neos/flow": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Federation\\News\\": "Classes/"
+    }
+  },
+  "extra": {
+    "neos": {
+      "package-key": "Federation.News"
+    }
+  }
+}

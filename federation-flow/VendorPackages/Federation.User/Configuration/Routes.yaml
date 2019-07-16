@@ -1,0 +1,8 @@
+-
+  name: 'User GraphQL API'
+  uriPattern: '<GraphQLSubroutes>'
+  subRoutes:
+    'GraphQLSubroutes':
+      package: 't3n.GraphQL'
+      variables:
+        'endpoint': 'user'

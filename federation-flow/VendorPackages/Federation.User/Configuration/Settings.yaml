@@ -1,0 +1,27 @@
+Neos:
+  Flow:
+    mvc:
+      routes:
+        'Federation.User':
+          position: 'start'
+
+t3n:
+  GraphQL:
+    endpoints:
+      'user':
+        logRequests: true
+        schemas:
+          user:
+            typeDefs: 'resource://Federation.User/Private/GraphQL/schema.graphql'
+            resolvers:
+              Query: 'Federation\User\Resolver\QueryResolver'
+
+          federationEntity:
+            typeDefs: 'resource://Federation.User/Private/GraphQL/federation.graphql'
+
+          federationSpec:
+            typeDefs: 'resource://t3n.GraphQL.ApolloFederation/Private/GraphQL/federation-schema.graphql'
+            resolvers:
+              _Entity: 't3n\GraphQL\ApolloFederation\Resolver\EntityResolver'
+              _Service: 't3n\GraphQL\ApolloFederation\Resolver\ServiceResolver'
+              Query: 't3n\GraphQL\ApolloFederation\Resolver\QueryResolver'
